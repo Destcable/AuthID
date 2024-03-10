@@ -4,7 +4,7 @@ const registerUser = (req, res) => {
     const validate = registerValidate(req.body);
     
     if (validate) { 
-        return res.send(validate);
+        return res.send({ 'message': validate });
     }
 
     res.send(`Hello!`);
