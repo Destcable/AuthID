@@ -1,12 +1,13 @@
-import { query, validationResult } from 'express-validator';
+import registerValidate from "../validators/auth/registerValidate";
 
 const registerUser = (req, res) => { 
-    const result = validationResult(req);
-    if (result.isEmpty()) {
-      return res.send(`Hello, ${req.query.person}!`);
+    const validate = registerValidate(req.body);
+    
+    if (validate) { 
+        return res.send(validate);
     }
-  
-    res.send({ errors: result.array() });
+
+    res.send(`Hello!`);
 };
 
 export { 
