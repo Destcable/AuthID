@@ -1,23 +1,26 @@
 {
   "name": "authid",
   "version": "1.0.0",
+  "author": "Destcable // Artem Pavlov",
   "description": "",
+  "keywords": [],
+  "license": "ISC",
   "main": "dist/app.js",
+  "imports": {
+    "#*": "./controllers/*"
+  },
   "scripts": {
     "start": "tsc && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.3",
+    "multer": "^1.4.5-lts.1"
+  },
   "devDependencies": {
+    "@types/multer": "1.4.11",
     "@types/express": "4.17.21",
     "tslint": "6.1.3",
     "typescript": "5.4.2"
-  },
-  "dependencies": {
-    "@types/multer": "^1.4.11",
-    "express": "4.18.3",
-    "multer": "^1.4.5-lts.1"
   }
 }

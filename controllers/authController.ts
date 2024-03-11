@@ -9,7 +9,9 @@ const registerUser = (req, res) => {
         return error(res, validate);
     }
 
-    return success(res, 'Hello!');
+    const { name, surname } = req.body;
+
+    return success(res, `Вы: ${name} + ${surname}`);
 };
 
 export { 
